@@ -3,6 +3,22 @@ console.log(btnAdd);
 //listener esto lo necitamos cuando le demos click el boton escuche o sepa que se dio 
 // el evento addEventListener es una forma de cvrear esa funcion
 
-btnAdd.addEventListener("click", function() {
-    console.log("crear tarea");
-});
+const createTasks = (evento) =>{
+    evento.preventDefault();
+    const input = document.querySelector('[data-form-input]');
+    console.log(input.value);
+}
+
+console.log(btnAdd);
+
+btnAdd.addEventListener('click', createTasks);
+
+
+//Arrow funtions o funciones flechas va,os a generar esa fucnion en una funcion flecha
+// btnAdd.addEventListener("click", (evento) => {
+//     evento.preventDefault();
+//     const input = document.querySelector('[data-form-input]');  
+    
+//     console.log(input.value);
+//     // console.log("crear tarea");
+// });
